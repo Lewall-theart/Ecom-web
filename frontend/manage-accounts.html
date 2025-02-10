@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="header">
+        <a class="logo" href="admin.html">Admin page</a>
+        <div class="header-right">
+            <a id="cart-button" href="manage-products.html">Products</a>
+            <a id="account-button" href="manage-accounts.html">Accounts</a>
+            <a id="logout-button">Logout</a>
+        </div>
+    </div>
+
+    <div class="account-container">
+        <h2>Account Management</h2>
+        <button id="create-account-button" class="btn">Create Account</button>
+        <table id="account-table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="account-body"></tbody>
+        </table>
+    </div>
+
+    <div id="edit-account-modal" style="display:none;">
+        <h2 id="edit-account-header">Edit Account</h2>
+        <form id="edit-account-form">
+            <input type="hidden" id="edit-account-id">
+            <label for="edit-account-name">Name:</label>
+            <input type="text" id="edit-account-name" required><br>
+            <label for="edit-account-email">Email:</label>
+            <input type="text" id="edit-account-email" required><br>
+            <label for="edit-account-password">Password:</label>
+            <input type="password" id="edit-account-password"><br>
+            <label for="edit-account-old-password">Old Password:</label>
+            <input type="password" id="edit-account-old-password">
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </form>
+    </div>
+
+    <div id="create-account-modal" style="display:none;">
+        <h2>Create Account</h2>
+        <form id="create-account-form">
+            <label for="create-account-name">Name:</label>
+            <input type="text" id="create-account-name" required><br>
+            <label for="create-account-email">Email:</label>
+            <input type="text" id="create-account-email" required><br>
+            <label for="create-account-password">Password:</label>
+            <input type="password" id="create-account-password"><br>
+            <button type="submit">Create Account</button>
+            <button type="button" id="cancel-create">Cancel</button>
+        </form>
+    </div>
+
+    <footer>
+        Account management page
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/manage-accounts.js"></script>
+</body>
+</html>

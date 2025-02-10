@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="header">
+        <a class="logo" href="admin.html">Admin page</a>
+        <div class="header-right">
+            <a id="cart-button" href="manage-products.html">Products</a>
+            <a id="account-button" href="manage-accounts.html">Accounts</a>
+            <a id="logout-button">Logout</a>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <h2>Product Management</h2>
+        <button id="create-product-button" class="btn">Create Product</button>
+        <table id="product-table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="product-body"></tbody>
+        </table>
+    </div>
+
+    <div id="edit-product-modal" style="display:none;">
+        <h2>Edit Product</h2>
+        <form id="edit-product-form">
+            <input type="hidden" id="edit-product-id">
+            <label for="edit-product-name">Name:</label>
+            <input type="text" id="edit-product-name" required><br>
+            <label for="edit-product-price">Price:</label>
+            <input type="number" id="edit-product-price" step="0.01" required><br>
+            <label for="edit-product-amount">Amount:</label>
+            <input type="number" id="edit-product-amount" min="0" required><br>
+            <label for="edit-product-description">Description:</label>
+            <textarea id="edit-product-description" required></textarea><br>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </form>
+    </div>
+
+    <div id="create-product-modal" style="display:none;">
+        <h2>Create Product</h2>
+        <form id="create-product-form">
+            <label for="create-product-name">Name:</label>
+            <input type="text" id="create-product-name" required><br>
+            <label for="create-product-price">Price:</label>
+            <input type="number" id="create-product-price" step="0.01" required><br>
+            <label for="create-product-amount">Amount:</label>
+            <input type="number" id="create-product-amount" min="0" required><br>
+            <label for="create-product-description">Description:</label>
+            <textarea id="create-product-description" required></textarea><br>
+            <button type="submit">Create Product</button>
+            <button type="button" id="cancel-create">Cancel</button>
+        </form>
+    </div>
+
+    <footer>
+        Product management page
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/manage-products.js"></script>
+</body>
+</html>

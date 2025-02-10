@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+    <div class="header">
+        <a class="logo" href="home.html">Home page</a>
+        <div class="header-right">
+            <a id="product-button" href="products.html">Products</a>
+            <a id="cart-button" href="cart.html">Cart</a>
+            <a id="account-button" href="user-account.html">Account</a>
+            <a id="logout-button">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Account Information</h1>
+        <form id="user-account-form">
+            <input type="hidden" id="account-id-field">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name-input" name="name" value="">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email-input" name="email" value="">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Old assword:</label>
+                <input type="password" id="old-password-input" name="password" placeholder="********">
+            </div>
+
+            <div class="form-group">
+                <label for="password">New assword:</label>
+                <input type="password" id="new-password-input" name="password" placeholder="********">
+            </div>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="scripts/user-account.js"></script>
+</body>
+</html>

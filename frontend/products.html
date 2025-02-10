@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="header">
+        <a class="logo" href="home.html">Home page</a>
+        <div class="header-right">
+            <a id="product-button" href="products.html">Products</a>
+            <a id="cart-button" href="cart.html">Cart</a>
+            <a id="account-button" href="user-account.html">Account</a>
+            <a id="logout-button">Logout</a>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <h2>Products</h2>
+        <table id="product-table" border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Purchase amount</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="product-body"></tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="scripts/products.js"></script>
+</body>
+</html>
